@@ -24,9 +24,8 @@
         name: "wpdb-{{pgrole}}"
         image: mariadb
         pull: yes
-        expose: 3306
-        #published_ports:
-        #  - "127.0.0.1:10{{wp_port.stdout}}:3306"
+        ports:
+          - "8080:9000"
         volumes:
           - "/etc/localtime:/etc/localtime:ro"
           - "/opt/appdata/wordpress/{{wp_id.stdout}}/{{wp_id.stdout}}-db:/var/lib/mysql"
