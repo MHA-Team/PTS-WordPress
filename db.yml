@@ -25,7 +25,7 @@
         image: mariadb
         pull: yes
         ports:
-          - "8080:9000"
+          - "3306:3306"
         volumes:
           - "/etc/localtime:/etc/localtime:ro"
           - "/opt/appdata/wordpress/{{wp_id.stdout}}/{{wp_id.stdout}}-db:/var/lib/mysql"
